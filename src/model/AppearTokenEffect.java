@@ -9,21 +9,19 @@ package model;
  *
  * @author p1506348
  */
-public class DisappearEffect extends Effect {
+public class AppearTokenEffect extends Effect {
 
     /**
-     *
-     * @param line
      * 
+     * @param line
      * @param column
-     * @param game
-     * Fait disparaître un jeton ciblé par line et column du plateau.
+     * @param game 
+     * Joue un jeton au hasard sur le plateau. 
      */
     @Override
     public void playEffect(int line, int column, Game game) {
-        game.getBoard().getTileIJ(line, column).setStatus(-1);
+        int rand=(int) (Math.random() * ( 10 - 0 ));
+        game.playMove(rand);
     }
-
-
-
+    
 }
