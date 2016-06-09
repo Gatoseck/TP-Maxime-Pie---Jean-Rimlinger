@@ -20,7 +20,7 @@ public class AppearTokenEffect extends Effect {
      */
     @Override
     public void playEffect(int line, int column, Game game) {
-        int rand=(int) (Math.random() * ( 10 - 0 ));
+        int rand=(int) (Math.random() * ( 9 - 0 ));
         game.playMove(rand);
     }
     
